@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigorta Sayfası</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background-color: #F5F7F9;
+            color: rgb(29, 30, 30);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Üst Menü */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            max-width: 95%;
+            margin: 0;
+        }
+
+        .logo {
+            margin-top: 1%;
+            padding: 10px;
+        }
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu-item {
+            position: relative;
+        }
+
+        .menu-link {
+            color: #515353;
+            cursor: pointer;
+        }
+
+        /* Dropdown İçeriği */
+        .dropdown {
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 900px;
+            display: none; /* Varsayılan olarak gizli */
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu-item.active .dropdown {
+            display: flex; /* Menü aktif olduğunda aç */
+        }
+
+        .arrow {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        .menu-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .contact .btn-login {
+            background-color: #0089EC;
+            font-weight: bold;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .btn-login {
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-login:hover {
+            background-color: #005bb5;
+            /* Buton hover rengi */
+        }
+
+
+        /* Sağ Bildirim */
+        .notification {
+            position: fixed;
+            top: 150px;
+            right: 10px;
+            background-color: #FFFFFF;
+            color: #1F2020;
+            margin-top: 5px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: small;
+            padding: 3px 3px;
+            text-align: center;
+        }
+
+        .title h1 {
+            font-size: 55px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .title .subtitle {
+            font-size: large;
+            color: #515353;
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Ana İçerik */
+        main {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cards {
+            background-color: #F5F7F9;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .col-md-3 {
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin: 10px;
+            text-align: center;
+            min-width: 100px;
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: 0.3s;
+        }
+
+        .col-md-3:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .col-md-3 img {
+            width: 100px;
+            height: auto;
+        }
+
+        .col-md-3 span {
+            font-weight: bolder;
+            font-size: 90%;
+            color: #333;
+        }
+
+        .col-md-3 span:hover {
+            color: #007bff;
+        }
+
+        .info-container .view-all {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #007bff;
+            font-weight: normal;
+        }
+
+        /* 2. Section */
+        .info-section {
+            background-color: #ffffff;
+            padding: 80px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-section h1 {
+            font-size: 24px;
+            color: #222;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .info-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            text-align: center;
+            flex: 1;
+        }
+
+        .card img {
+            max-width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Üst Menü ve Logo -->
+    <header>
+
+        <div class="logo">
+            <img src="../Image/app-logo-goat.svg">
+            <img src="../Image/app-logo-title.svg">
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="productsMenu">Ürünlerimiz <span class="arrow">&#9660;</span></a>
+                    <div class="dropdown" id="productsDropdown">
+                        <div class="dropdown-section">
+                            <h4>Aracım</h4>
+                            <a href="#">Kasko</a>
+                            <a href="#">Trafik Sigortası</a>
+                            <a href="#">İMM</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Sağlığım</h4>
+                            <a href="#">Tamamlayıcı Sağlık Sigortası</a>
+                            <a href="#">Özel Sağlık Sigortası</a>
+                            <a href="#">Seyahat Sağlık</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Evim</h4>
+                            <a href="#">DASK</a>
+                            <a href="#">Konut Sigortası</a>
+                            <a href="#">Evim Güvende</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Diğer</h4>
+                            <a href="#">Cep Telefonu</a>
+                            <a href="#">Evcil Hayvan</a>
+                            <a href="#">Ferdi Kaza</a>
+                        </div>
+                    </div>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="menu">Kampanyalar<span class="arrow">&#9660;</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="menu">Poliçe İşlemleri<span class="arrow">&#9660;</span></a>
+                    <div class="dropdown" id="policeDropdown">
+                        <div class="dropdown-section">
+                            <a href="#">Poliçe İptal Başvuru</a>
+                            <a href="#">Poliçe İptal Takip</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="menu">Bilgi Merkezi<span class="arrow">&#9640;</span></a>
+                    <div class="dropdown" id="infoDropdown">
+                        <div class="dropdown-section">
+                            <a href="#">Sigorta Blog</a>
+                            <a href="#">Hakkımızda</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="contact">
+            <p>Yardımcı olmaya hazırız</p>
+            <strong>444 24 00</strong>
+            <button class="btn-login">Giriş Yap / Üye Ol</button>
+        </div>
+    </header>
+
+    <!-- Sağ Bildirim -->
+    <aside class="notification">
+        <img src="../Image/gift.svg">
+        <a>Arkadaşlarını Davet Et, 20.000 TL'ye varan hediye çeki kazan!</a>
+    </aside>
+
+    <div class="title">
+        <h1>Sigortada Güvenin Adresi</h1>
+        <p class="subtitle">Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</p>
+    </div>
+
+    <!-- Ana İçerik -->
+    <main>
+        <!-- Sigorta Kartları -->
+        <section class="cards">
+            <div class="info-container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="/Image/auto-v2.svg">
+                        <span>Kasko</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="discount-label">%10 İndirim</span>
+                        <img src="/Image/electric-vehicle-orange.svg">
+                        <span>Elektrikli Araç Kaskosu</span>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="/Image/complementhealth-v2.svg">
+                        <span>Tamamlayıcı Sağlık</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="/Image/traffic-orange.svg">
+                        <span>Trafik Sigortası</span>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="/Image/imm.svg">
+                        <span>İMM</span>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="/Image/healthOrange.svg">
+                        <span>Özel Sağlık</span>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="/Image/travel.svg">
+                        <span>Seyahat Sağlık</span>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="/Image/dask-v2.svg">
+                        <span>DASK</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="view-all">Tüm Ürünleri Gör</a>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+            <div class="info-section">
+                <h1>Poliçemi Neden Sigortam.net'ten Almalıyım?</h1>
+                <div class="info-cards">
+                    <div class="card">
+                        <img src="../Image/policy-trustworthy.svg">
+                        <h3>Doğru Ürün</h3>
+                        <p>Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve
+                            kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../Image/policy-price.svg">
+                        <h3>İyi Fiyat</h3>
+                        <p>Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni düşünerek “en iyi fiyat
+                            garantisi” sunuyoruz.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../Image/policy-with-you.svg">
+                        <h3>7/24 Hizmet</h3>
+                        <p>24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her ihtiyacında yanındayız.
+                            Üstelik hasar anında saniyeler içinde bize ulaşabilirsin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(item => {
+            const link = item.querySelector('.menu-link');
+
+            // Menüye tıklayınca açılır kapanır
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                item.classList.toggle('active');
+            });
+
+            // Menünün dışında tıklanınca menüyü kapat
+            document.addEventListener('click', function (event) {
+                if (!item.contains(event.target) && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+</html>

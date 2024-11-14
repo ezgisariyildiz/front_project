@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menü</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Genel Stiller */
+        .navbar {
+            background-color: #f8f8f8;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .menu-link:hover {
+            background-color: #ddd;
+        }
+
+        .arrow {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        /* Dropdown İçeriği */
+        .dropdown {
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 900px;
+            /* Genişlik ayarı */
+            display: flex;
+            gap: 20px;
+        }
+
+        .dropdown-section {
+            padding: 20px;
+        }
+
+        .dropdown-section h4 {
+            margin-top: 10px;
+        }
+
+        .dropdown-section a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .dropdown-section a:hover {
+            background-color: #838383;
+        }
+
+        /* Dropdown İçeriğini Göster */
+        .menu-item .dropdown {
+            display: none;
+            /* Varsayılan olarak kapalı */
+        }
+
+        .menu-item.active .dropdown {
+            display: flex;
+            /* Menü aktif olduğunda aç */
+        }
+
+        .menu-item.active .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#" class="menu-link" id="productsMenu">Ürünlerimiz <span class="arrow">&#9660;</span></a>
+                <div class="dropdown" id="productsDropdown">
+                    <div class="dropdown-section">
+                        <h4>Aracım</h4>
+                        <a href="#">Kasko</a>
+                        <a href="#">Trafik Sigortası</a>
+                        <a href="#">İMM</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4>Sağlığım</h4>
+                        <a href="#">Tamamlayıcı Sağlık Sigortası</a>
+                        <a href="#">Özel Sağlık Sigortası</a>
+                        <a href="#">Seyahat Sağlık</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4>Evim</h4>
+                        <a href="#">DASK</a>
+                        <a href="#">Konut Sigortası</a>
+                        <a href="#">Evim Güvende</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4>Diğer</h4>
+                        <a href="#">Cep Telefonu</a>
+                        <a href="#">Evcil Hayvan</a>
+                        <a href="#">Ferdi Kaza</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const productsMenu = document.getElementById('productsMenu');
+            const menuItem = productsMenu.parentElement;
+
+            productsMenu.addEventListener('click', function (event) {
+                event.preventDefault(); // Default link behaviorını engelle
+                menuItem.classList.toggle('active');
+            });
+
+            document.addEventListener('click', function (event) {
+                // Eğer tıklama menünün dışında gerçekleştiyse ve menü açık ise menüyü kapat
+                if (!menuItem.contains(event.target) && menuItem.classList.contains('active')) {
+                    menuItem.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

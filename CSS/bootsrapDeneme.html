@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for navbar */
+        .navbar-custom {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: #5a5a5a;
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #007bff;
+        }
+
+        .navbar-custom .navbar-brand:hover {
+            color: #0056b3;
+        }
+
+        .navbar-custom .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .navbar-custom .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="#">sigortam.net</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ürünlerimiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kampanyalar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Poliçe İşlemleri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bilgi Merkezi</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Yardımcı olmaya hazırız 444 24 00
+            </span>
+            <a class="btn btn-custom ml-3" href="#">Giriş Yap / Üye Ol</a>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JavaScript ve jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

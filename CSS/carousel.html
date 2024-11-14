@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap ile Carousel ve Sekmeler</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .nav-tabs .nav-link {
+            border: none;
+        }
+
+        /* Metinleri tüm sekme alanına yay */
+        .tab-pane {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Sekmeleri ortalamak için */
+        .nav-tabs {
+            justify-content: center;
+            border: 10px;
+            border-bottom: none;
+        }
+
+        /* Sekmeler ile carousel arasında boşluk bırakmak için */
+        .tab-content {
+            margin-top: 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Sekmeler -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="kampanyalar-tab" data-toggle="tab" href="#kampanyalar" role="tab"
+                    aria-controls="kampanyalar" aria-selected="true">İndirimler & Kampanyalar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="reklamlar-tab" data-toggle="tab" href="#reklamlar" role="tab"
+                    aria-controls="reklamlar" aria-selected="false">Reklam Filmleri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="oneCikanlar-tab" data-toggle="tab" href="#oneCikanlar" role="tab"
+                    aria-controls="oneCikanlar" aria-selected="false">Öne Çıkanlar</a>
+            </li>
+        </ul>
+
+        <!-- Tab İçerikleri -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Kampanyalar Carousel -->
+            <div class="tab-pane fade show active" id="kampanyalar" role="tabpanel" aria-labelledby="kampanyalar-tab">
+                <div id="kampanyalarCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex">
+                                <div class="carousel-text p-3 bg-warning text-white w-50">
+                                    <h2>Kaskoda %65’e varan hasarsızlık indirimi!</h2>
+                                    <button class="btn btn-light mt-3">Hemen Keşfet →</button>
+                                </div>
+                                <img src="../Image/paylas-kazan-kampanya.jpg" class="w-50" alt="Kampanya 1">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex">
+                                <div class="carousel-text p-3 bg-primary text-white w-50">
+                                    <h2>Kaskoda %65’e varan hasarsızlık indirimi!</h2>
+                                    <button class="btn btn-light mt-3">Hemen Keşfet →</button>
+                                </div>
+                                <img src="../Image/paylas-kazan-kampanya.jpg" class="w-50" alt="Kampanya 1">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#kampanyalarCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#kampanyalarCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Reklamlar Carousel -->
+            <div class="tab-pane fade" id="reklamlar" role="tabpanel" aria-labelledby="reklamlar-tab">
+                <div id="reklamlarCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <iframe width="1080" height="520" src="https://www.youtube.com/embed/OMyxYmyyJRg" title="Sigortam.net Paylaş Kazan ile Kazancın Net!" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="carousel-item">
+                            <iframe width="1080" height="520" src="https://www.youtube.com/embed/fkTBn_w8Jzw" title="Sigortam.net’e Gelin Benzer Kaskoya Çoook Fazla Ödemeyin!" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="carousel-item">
+                            <iframe width="1080" height="520" src="https://www.youtube.com/embed/-ZpvfneEadA" title="10 Milyon Mutlu Müşteri Sigortam.net&#39;i Seçti! ​" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="carousel-item">
+                            <iframe width="1080" height="520" src="https://www.youtube.com/embed/UQ-3UkXC09E" title="20&#39;den Fazla Sigorta Şirketi Sigortam.net&#39;te!" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="carousel-item">
+                            <iframe width="1080" height="520" src="https://www.youtube.com/embed/AAIrFOA-NbQ" title="Sigortam.net&#39;ten Kasko Yaptırmalı!" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#reklamlarCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#reklamlarCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            
+
+            <!-- Öne Çıkanlar Carousel -->
+            <div class="tab-pane fade" id="oneCikanlar" role="tabpanel" aria-labelledby="oneCikanlar-tab">
+                <div id="oneCikanlarCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex">
+                                <div class="carousel-text p-4 bg-primary text-white w-50">
+                                    <h2>Öne Çıkan Kampanya 1</h2>
+                                    <button class="btn btn-light mt-3">Detaylar →</button>
+                                </div>
+                                <img src="../Image/paylas-kazan-one-cikanlar.jpg" class="w-50" alt="Öne Çıkan 1">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex">
+                                <div class="carousel-text p-4 bg-primary text-white w-50">
+                                    <h2>Öne Çıkan Kampanya 2</h2>
+                                    <button class="btn btn-light mt-3">Detaylar →</button>
+                                </div>
+                                <img src="../Image/paylas-kazan-one-cikanlar.jpg" class="w-50" alt="Öne Çıkan 2">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#oneCikanlarCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#oneCikanlarCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

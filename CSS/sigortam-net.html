@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigortam.net</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Üst Menü ve Logo -->
+    <header>
+        <div class="logo">
+            <img src="../Image/app-logo-goat.svg">
+            <img src="../Image/app-logo-title.svg">
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="productsMenu">Ürünlerimiz <span class="arrow">&#9660;</span></a>
+                    <div class="dropdown">
+                        <div class="dropdown-section">
+                            <h5>Aracım</h5>
+                            <a href="#">Kasko</a>
+                            <a href="#">Trafik Sigortası</a>
+                            <a href="#">İMM</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h5>Sağlığım</h5>
+                            <a href="#">Tamamlayıcı Sağlık Sigortası</a>
+                            <a href="#">Özel Sağlık Sigortası</a>
+                            <a href="#">Seyahat Sağlık</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h5>Evim</h5>
+                            <a href="#">DASK</a>
+                            <a href="#">Konut Sigortası</a>
+                            <a href="#">Evim Güvende</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h5>Diğer</h5>
+                            <a href="#">Cep Telefonu</a>
+                            <a href="#">Evcil Hayvan</a>
+                            <a href="#">Ferdi Kaza</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="campaignMenu">Kampanyalar <span class="arrow">&#9660;</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="policeMenu">Poliçe İşlemleri <span
+                            class="arrow">&#9660;</span></a>
+                    <div class="dropdown">
+                        <div class="dropdown-section">
+                            <a href="#">Poliçe İptal Başvuru</a>
+                            <a href="#">Poliçe İptal Takip</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link" id="infoMenu">Bilgi Merkezi<span class="arrow">&#9660;</span></a>
+                    <div class="dropdown">
+                        <div class="dropdown-section">
+                            <a href="#" class="navlink">Sigorta Blog</a>
+                            <a href="#" class="navlink">Hakkımızda</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+        <div class="contact">
+            <p>Yardımcı olmaya hazırız</p>
+            <strong>444 24 00</strong>
+            <button class="btn-login">Giriş Yap / Üye Ol</button>
+        </div>
+    </header>
+
+    <!-- Sağ Bildirim -->
+    <aside class="notification">
+        <img src="../Image/gift.svg">
+        <a>Arkadaşlarını Davet Et, 20.000 TL'ye varan hediye çeki kazan!</a>
+    </aside>
+
+    <div class="title">
+        <h1>Sigortada Güvenin Adresi</h1>
+        <p class="subtitle">Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</p>
+    </div>
+
+    <!-- Ana İçerik -->
+    <main>
+        <!-- Sigorta Kartları -->
+        <section class="cards">
+            <div class="info-container">
+                <div class="row">
+                    <div class="info">
+                        <img src="/Image/auto-v2.svg">
+                        <br>
+                        <span>Kasko</span>
+                    </div>
+                    <div class="info">
+                        <span class="discount-label">%10 İndirim</span>
+                        <img src="/Image/electric-vehicle-orange.svg">
+                        <br>
+                        <span>Elektrikli Araç Kaskosu</span>
+                    </div>
+                    <div class="info">
+                        <img src="/Image/complementhealth-v2.svg">
+                        <br>
+                        <span>Tamamlayıcı Sağlık</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info">
+                        <img src="/Image/traffic-orange.svg">
+                        <br>
+                        <span>Trafik Sigortası</span>
+                    </div>
+                    <div class="info">
+                        <img src="/Image/imm.svg">
+                        <br>
+                        <span>İMM</span>
+                    </div>
+                    <div class="info">
+                        <img src="/Image/healthOrange.svg">
+                        <br>
+                        <span>Özel Sağlık</span>
+                    </div>
+                    <div class="info">
+                        <img src="/Image/travel.svg">
+                        <br>
+                        <span>Seyahat Sağlık</span>
+                    </div>
+                    <div class="info">
+                        <img src="/Image/dask-v2.svg" alt="">
+                        <br>
+                        <span>DASK</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="view-all">
+                Tüm Ürünleri Gör</a>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="info-section">
+            <div class="info-cards">
+                <div class="title-2">
+                    <h1>Poliçemi neden Sigortam.net’ten almalıyım?</h1>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <img src="../Image/policy-trustworthy.svg" alt="Doğru Ürün">
+                        <h3>Doğru Ürün</h3>
+                        <p>Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve
+                            kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../Image/policy-price.svg" alt="İyi Fiyat">
+                        <h3>İyi Fiyat</h3>
+                        <p>Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni düşünerek “en iyi fiyat
+                            garantisi” sunuyoruz.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../Image/policy-with-you.svg" alt="7/24 Hizmet">
+                        <h3>7/24 Hizmet</h3>
+                        <p>24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her ihtiyacında yanındayız.
+                            Üstelik hasar anında saniyeler içinde bize ulaşabilirsin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sayfa kaydırma alanı -->
+        <section class="phone-mockup">
+            <div class="scroll-container">
+                <!-- İçerik Bölümü -->
+                <div class="content">
+                    <section class="content-section" id="section1">
+                        <h2>Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!</h2>
+                        <p>Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana
+                            özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.</p>
+                        <button class="btn">Hemen Teklif Al</button>
+                    </section>
+                    <section class="content-section" id="section2">
+                        <h2>Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.</h2>
+                        <p>20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle
+                            uygun fiyata sigortan anında başlasın.</p>
+                        <button class="btn">Hemen Teklif Al</button>
+                    </section>
+                </div>
+
+                <!-- Mobil ekran alanı -->
+                <div class="mobile-screen">
+                    <div class="screen-content">
+                        <img src="../Image/phone-mockup.jpg" alt="Phone Mockup">
+                        <p id="screen-text">Görseldeki fiyatlar temsilidir. Aracına özel fiyatları tekliflerde
+                            görebilirsin.</p>
+                        <div class="screen-feature-1">
+                            <img src="../Image/feature1.svg" alt="Feature 1">
+                        </div>
+                        <div class="screen-feature-2">
+                            <img src="../Image/feature2.svg" alt="Feature 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carousel Alanı -->
+        <div class="container mt-5">
+            <h1 class="carousel-title">Sigortam.net'te sana özel neler var?</h1>
+            <!-- Sekmeler -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="kampanyalar-tab" data-bs-toggle="tab" href="#kampanyalar" role="tab"
+                        aria-controls="kampanyalar" aria-selected="true">İndirimler & Kampanyalar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="reklamlar-tab" data-bs-toggle="tab" href="#reklamlar" role="tab"
+                        aria-controls="reklamlar" aria-selected="false">Reklam Filmleri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="oneCikanlar-tab" data-bs-toggle="tab" href="#oneCikanlar" role="tab"
+                        aria-controls="oneCikanlar" aria-selected="false">Öne Çıkanlar</a>
+                </li>
+            </ul>
+
+            <div class="carousel-indicators-container">
+                <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">
+                </button>
+                <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="1" aria-label="Slide 2">
+                </button>
+                <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="2" aria-label="Slide 3">
+                </button>
+                <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="3" aria-label="Slide 4">
+                </button>
+            </div>
+
+            <!-- Tab İçerikleri -->
+            <div class="tab-content" id="myTabContent">
+                <!-- Kampanyalar Carousel -->
+                <div class="tab-pane fade show active" id="kampanyalar" role="tabpanel"
+                    aria-labelledby="kampanyalar-tab">
+                    <div id="kampanyalarCarousel" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#kampanyalarCarousel" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-flex">
+                                    <div class="carousel-text p-4 bg-primary text-white w-50">
+                                        <h2>Arkadaşlarını davet et, 20.000 TL' ye varan hediye çeki kazan!</h2>
+                                        <button class="btn btn-light mt-3">Hemen Keşfet →</button>
+                                    </div>
+                                    <img src="../Image/paylas-kazan-kampanya.jpg" class="w-50" alt="Kampanya 1">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="carousel-text p-4 bg-primary text-white w-50">
+                                        <h2>Kaskoda %65’e varan hasarsızlık indirimi!</h2>
+                                        <button class="btn btn-light mt-3">Hemen Keşfet →</button>
+                                    </div>
+                                    <img src="../Image/kasko-hasarsizlik.jpg" class="w-50" alt="Kampanya 2">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="carousel-text p-4 bg-primary text-white w-50">
+                                        <h2>%25'e varan meslek indirimleriyle kaskon Sigortam.net'te!</h2>
+                                        <button class="btn btn-light mt-3">Hemen Keşfet →</button>
+                                    </div>
+                                    <img src="../Image/meslek-indirimi.jpg" class="w-50" alt="Kampanya 3">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="carousel-text p-4 bg-primary text-white w-50">
+                                        <h2>Sigortam.net'ten Türk Telekom müşterilerine özel indirimler!</h2>
+                                        <button class="btn btn-light mt-3">Hemen Keşfet →</button>
+                                    </div>
+                                    <img src="../Image/turk-telekom.jpg" class="w-50" alt="Kampanya 4">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#kampanyalarCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#kampanyalarCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Reklamlar Carousel -->
+                <div class="tab-pane fade" id="reklamlar" role="tabpanel" aria-labelledby="reklamlar-tab">
+                    <div id="reklamlarCarousel" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <iframe loading="lazy" width="1080" height="520"
+                                    src="https://www.youtube.com/embed/OMyxYmyyJRg"
+                                    title="Sigortam.net Paylaş Kazan ile Kazancın Net!" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe loading="lazy" width="1080" height="520"
+                                    src="https://www.youtube.com/embed/fkTBn_w8Jzw"
+                                    title="Sigortam.net’e Gelin Benzer Kaskoya Çoook Fazla Ödemeyin!" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe loading="lazy" width="1080" height="520"
+                                    src="https://www.youtube.com/embed/-ZpvfneEadA"
+                                    title="10 Milyon Mutlu Müşteri Sigortam.net&#39;i Seçti! ​" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe loading="lazy" width="1080" height="520"
+                                    src="https://www.youtube.com/embed/UQ-3UkXC09E"
+                                    title="20&#39;den Fazla Sigorta Şirketi Sigortam.net&#39;te!" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe loading="lazy" width="1080" height="520"
+                                    src="https://www.youtube.com/embed/AAIrFOA-NbQ"
+                                    title="Sigortam.net&#39;ten Kasko Yaptırmalı!" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#reklamlarCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#reklamlarCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Öne Çıkanlar Carousel -->
+                <div class="tab-pane fade" id="oneCikanlar" role="tabpanel" aria-labelledby="oneCikanlar-tab">
+                    <div id="oneCikanlarCarousel" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-flex">
+                                    <div class="carousel-text p-4 bg-primary text-white w-50">
+                                        <h2>Öne Çıkan Kampanya 1</h2>
+                                        <button class="btn btn-light mt-3">Detaylar →</button>
+                                    </div>
+                                    <img src="../Image/paylas-kazan-one-cikanlar.jpg" class="w-50" alt="Öne Çıkan 1">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="carousel-text p-4 bg-primary text-white w-50">
+                                        <h2>Öne Çıkan Kampanya 2</h2>
+                                        <button class="btn btn-light mt-3">Detaylar →</button>
+                                    </div>
+                                    <img src="../Image/paylas-kazan-one-cikanlar.jpg" class="w-50" alt="Öne Çıkan 2">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#oneCikanlarCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#oneCikanlarCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                const link = item.querySelector('.menu-link');
+
+                // Menüye tıklayınca açılır kapanır
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    item.classList.toggle('active');
+                });
+
+                // Menünün dışında tıklanınca menüyü kapat
+                document.addEventListener('click', function (event) {
+                    if (!item.contains(event.target) && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Sayfa kaydırma alanı 
+        document.addEventListener("scroll", function () {
+            const section1 = document.getElementById("section1");
+            const section2 = document.getElementById("section2");
+            const feature1 = document.querySelector(".screen-feature-1");
+            const feature2 = document.querySelector(".screen-feature-2");
+
+            const section1Position = section1.getBoundingClientRect().top;
+            const section2Position = section2.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            // section1 ekranda göründüğünde feature1 aktif olur, feature2 pasif olur
+            if (section1Position < screenHeight / 2 && section2Position > screenHeight / 2) {
+                feature1.classList.add("active");
+                feature2.classList.remove("active");
+            }
+            // section2 ekranda göründüğünde feature2 aktif olur, feature1 pasif olur
+            else if (section2Position < screenHeight / 2) {
+                feature1.classList.remove("active");
+                feature2.classList.add("active");
+            }
+        });
+
+        // Carousel tab active alanı
+        document.addEventListener('DOMContentLoaded', function () {
+            var navItems = document.querySelectorAll('.nav-item');
+
+            navItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    // Tüm nav-item'lardan 'active' sınıfını kaldır
+                    navItems.forEach(function (nav) {
+                        nav.classList.remove('active');
+                    });
+
+                    // Tıklanan öğeye 'active' sınıfını ekle
+                    this.classList.add('active');
+                });
+            });
+        });
+
+        // Carousel alanı
+        document.getElementById('reklamlar-tab').addEventListener('shown.bs.tab', function () {
+            let reklamlarCarousel = new bootstrap.Carousel(document.getElementById('reklamlarCarousel'));
+            reklamlarCarousel.cycle();
+        });
+
+        document.querySelectorAll('[data-bs-toggle="tab"]').forEach(function (tab) {
+            tab.addEventListener('shown.bs.tab', function (event) {
+                let carouselId = event.target.getAttribute('href').replace('#', '');
+                let carouselElement = document.getElementById(carouselId + 'Carousel');
+                if (carouselElement) {
+                    let carousel = new bootstrap.Carousel(carouselElement);
+                    carousel.cycle();
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

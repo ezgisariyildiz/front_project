@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Kaydırma ve Efekt</title>
+    <style>
+        /* CSS Stillerini Buraya Ekleyin */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .scroll-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content {
+            width: 70%;
+        }
+
+        .mobile-screen {
+            width: 25%;
+            position: sticky;
+            top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s, background-color 0.5s;
+        }
+
+        .screen-content {
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .content-section {
+            height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content-section h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="content">
+            <!-- Her bir içerik için bir bölüm -->
+            <section class="content-section" id="section1">
+                <h2>İçerik 1</h2>
+                <p>Bu ilk içerik bölümüdür.</p>
+            </section>
+            <section class="content-section" id="section2">
+                <h2>İçerik 2</h2>
+                <p>Bu ikinci içerik bölümüdür.</p>
+            </section>
+            <section class="content-section" id="section3">
+                <h2>İçerik 3</h2>
+                <p>Bu üçüncü içerik bölümüdür.</p>
+            </section>
+        </div>
+        
+        <div class="mobile-screen">
+            <div class="screen-content">
+                <!-- Büyüyen veya değişen içerik burada olacak -->
+                <p id="screen-text">Başlangıç İçeriği</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Kodlarını Buraya Ekleyin
+        const mobileScreen = document.querySelector(".mobile-screen");
+        const screenText = document.getElementById("screen-text");
+
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.getAttribute("id");
+                    screenText.textContent = `Şu an ${sectionId} içeriktedir`;
+                    mobileScreen.style.transform = "scale(1.1)"; // büyüme efekti
+                } else {
+                    mobileScreen.style.transform = "scale(1)"; // varsayılan boyut
+                }
+            });
+        }, options);
+
+        document.querySelectorAll(".content-section").forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
